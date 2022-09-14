@@ -1,0 +1,69 @@
+# Listar Todos os Tasks
+GET http://localhost:8080/api/task
+# Authorization: Basic user ea212276-1d9c-4bc9-898e-b67aa29ef0b1
+###
+
+# Detalhes
+GET http://localhost:8080/api/task/1
+
+###
+
+# Apagar
+DELETE  http://localhost:8080/api/task/1
+
+###
+
+# Cadastrar
+POST  http://localhost:8080/api/task
+Content-Type: application/json
+Authorization: Basic joao@fiap.com.br 123
+
+{
+  "title": "Modelar o BD",
+  "description": "Modelar as tabelas do banco de dados",
+  "score": 100
+}
+
+###
+
+#Listar todos os usuários
+GET http://localhost:8080/api/user
+
+###
+
+#Detalhes
+GET http://localhost:8080/api/user/2
+
+###
+
+# Apagar usuário
+DELETE  http://localhost:8080/api/user/1
+Authorization: Basic admin@fiap.com.br administrador
+
+###
+
+# Cadastrar usuário
+POST  http://localhost:8080/api/user
+Content-Type: application/json
+Authorization: Basic admin@fiap.com.br administrador
+
+{
+  "name": "Miguel da Silva",
+  "email": "miguel@fiap.com.br",
+  "password": "78@23er"
+}
+
+###
+
+#Alterar usuário
+PUT  http://localhost:8080/api/user/2
+Content-Type: application/json
+Authorization: Basic admin@fiap.com.br administrador
+
+{
+  "name": "Miguel da Silva",
+  "email": "miguel@fiap.com.br"
+}
+
+###
+
